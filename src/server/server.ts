@@ -1,4 +1,4 @@
-import * as path from 'path';
+import path from 'path';
 import * as express from 'express';
 import apiRouter from './routes';
 import './middleware/bearerstrategy';
