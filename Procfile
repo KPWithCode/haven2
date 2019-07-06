@@ -1,1 +1,1 @@
-web: node src/server/server.ts
+web: npm run start
