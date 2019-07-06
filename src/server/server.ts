@@ -1,6 +1,7 @@
 // import * as path from 'path';
-let path= require('path');
-import * as express from 'express';
+let path = require('path');
+let express = require('express');
+// import * as express from 'express';
 import apiRouter from './routes';
 import './middleware/bearerstrategy';
 import './middleware/localstrategy';
