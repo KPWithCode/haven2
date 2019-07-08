@@ -25,7 +25,7 @@ const app = express();
 
 
 
-let p = path.join(__dirname, '../public/');
+let p = path.join(__dirname, '../public/js/app.js');
 console.log(p);
 
 app.use(express.json())
