@@ -25,7 +25,7 @@ const app = express();
 
 
 
-let p = path.join(__dirname, 'dist/haven2');
+let p = path.join(__dirname, 'dist/');
 console.log(p);
 
 app.use(express.json())
