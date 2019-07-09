@@ -27,7 +27,7 @@ let p = path.join(__dirname, 'public');
 app.use(passport.initialize());
 app.route('/auth').get(passport.authenticate(''))
 
-app.use('/static', (req, res, next) => {
+app.use('*', (req, res, next) => {
     res.sendFile(path.join(__dirname, `/public/index.html`));
 })    
 app.use(express.json())
