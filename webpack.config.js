@@ -21,7 +21,7 @@ const serverConfig = {
     },
     output: {
         filename: 'server.js',
-        path: path.resolve(__dirname, '/')
+        path: path.resolve(__dirname, 'dist')
     },
     target: 'node',
     node: {
