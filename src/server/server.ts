@@ -22,10 +22,7 @@ const app = express();
 //       });
 
 //   });
-
-
-
-let p = path.join(__dirname, '../public/index.html');
+let p = path.join(__dirname, './public');
 console.log(p);
 
 app.use(express.json())
