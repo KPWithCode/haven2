@@ -22,7 +22,7 @@ const app = express();
 //       });
 
 //   });
-let p = path.join(__dirname, '../public');
+let p = path.join(__dirname, 'public');
 // console.log(p);
 app.use(passport.initialize());
 app.route('/auth').get(passport.authenticate(''))
@@ -33,8 +33,6 @@ app.use('*', (req, res, next) => {
 app.use(express.json())
 app.use(express.static(p));
 app.use(apiRouter);
-
-
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
