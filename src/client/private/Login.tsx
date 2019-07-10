@@ -8,7 +8,7 @@ const Login = (props:ILoginProps) => {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-    const [loginStatus, setLoginStatus] = useState<string>('false')
+    const [loginStatus, setLoginStatus] = useState<boolean>(false)
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
@@ -31,10 +31,10 @@ const Login = (props:ILoginProps) => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log({ email });
-        if (this.login) return;
+        if (loginStatus) return;
 
         try {
-            this.login = true;
+            setLoginStatus(true)
             let result = await json('/auth/login', 'POST', {
                 email, password
             })
@@ -49,10 +49,10 @@ const Login = (props:ILoginProps) => {
                 setLoginStatus(loginStatus)
             }
         } catch (e) {
-            setLoginStatus(loginStatus)
+            setLoginStatus(false)
             throw e;
         } finally {
-            setLoginStatus(loginStatus)
+            setLoginStatus(false)
         }
     }
 
