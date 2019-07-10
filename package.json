@@ -5,9 +5,9 @@
   "main": "dist/server.js",
   "scripts": {
     "build":"npx webpack",
-    "watch:server": "nodemon dist/server.js",
+    "server": "nodemon dist/server.js",
     "dev": "npm-run-all --parallel watch:*",
-    "start": "node dist/server.js",
+    "start": "npm run start",
     "heroku-postbuild": "npm run build"
   },
   "keywords": [],
