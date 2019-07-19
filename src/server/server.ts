@@ -22,17 +22,18 @@ const app = express();
 //       });
 
 //   });
-let p = path.join(__dirname, 'public');
-// console.log(p);
-app.use(passport.initialize());
-app.route('/auth').get(passport.authenticate(''))
-
-app.use('*', (req, res, next) => {
-    res.sendFile(path.join(__dirname, `/public/index.html`));
-})    
+let p = path.join(__dirname, '../public');
 app.use(express.json())
 app.use(express.static(p));
 app.use(apiRouter);
+// console.log(p);
+app.use(passport.initialize());
+
+app.route('/auth').get(passport.authenticate(''))
+
+app.use('*', (req, res, next) => {
+    res.sendFile(path.join(__dirname, `../public/index.html`));
+})    
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
