@@ -1,5 +1,5 @@
-import * as path from 'path';
-import * as express from 'express';
+import path = require('path');
+import express= require('express') ;
 import apiRouter from './routes';
 import './middleware/bearerstrategy';
 import './middleware/localstrategy';
