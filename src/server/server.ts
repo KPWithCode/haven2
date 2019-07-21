@@ -22,7 +22,7 @@ const app = express();
 //       });
 
 //   });
-let p = path.join(__dirname, '../public');
+let p = path.join(__dirname, './public');
 app.use(express.json())
 app.use(express.static(p));
 app.use(apiRouter);
