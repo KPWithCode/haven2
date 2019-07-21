@@ -9,8 +9,7 @@
     "dev": "npm-run-all --parallel watch:*",
     "start": "node dist/server.js",
     "build": "npx webpack",
-    "heroku-postbuild": "npm run build",
-    "postinstall":"ng build"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
