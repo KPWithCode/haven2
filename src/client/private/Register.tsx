@@ -106,8 +106,8 @@ const Register: React.SFC<IRegisterProps> = (props) => {
             <div style={{ height: '10%' }}>
                 <img
                     style={{ width: '100%' }}
-                    src="https://images.unsplash.com/photo-1535048637252-3a8c40fa2172?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1790&q=80"
-                    alt="Farm trucks on open field"
+                    src="https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="sunset"
                 />
             </div>
             <div className="container border border-success"
