@@ -118,7 +118,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
                             className="d-flex justify-content-center text-dark">REGISTER</h2>
                         <div>
-                            <form className="form-group border border-success rounded  p-2 font-weight-bold mb-5 bg-warning text-dark "
+                            <form className="form-group border border-success rounded  p-2 font-weight-bold mb-5 sunrise text-dark "
                                 // style={{ backgroundColor: '#659999' }}
                                 onSubmit={handleSubmit}
                             >
