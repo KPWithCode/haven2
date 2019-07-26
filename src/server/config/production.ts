@@ -17,6 +17,7 @@ export default {
             database: process.env.KNEX_SCHEMA,
             password: process.env.KNEX_PASS
         },
+        
         pool: {
             min:0,
             max:7
