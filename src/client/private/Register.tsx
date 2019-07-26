@@ -100,8 +100,9 @@ const Register: React.SFC<IRegisterProps> = (props) => {
         style={{ width: '100%', height: '100vh' }}>
             <h1 
             // onClick={clickLogo}
+            className="text-dark"
             style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
-            <h5 className="float-right" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
+            <h5 className="float-right text-dark" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
             <div style={{ height: '10%' }}>
                 <img
                     style={{ width: '100%' }}
