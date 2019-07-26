@@ -168,8 +168,8 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                     onChange={handlePasswordChange}
                                 />
                             </form>
-                            <div className="d-flex justify-content-center">
-                                <button style={{ backgroundColor: '#f4791f' }} className=" btn btn-warning m-1 ">Join The Convo</button>
+                            <div className="d-flex justify-content-center sunrise">
+                                <button className=" btn btn-warning m-1 ">Join The Convo</button>
                                 {/* Dont need onClick={handleSubmit} */}
                             </div>
                         </div>
