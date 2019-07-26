@@ -97,7 +97,6 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     return (
         <div style={{ width: '100%', height: '100vh' }}>
             <h1 
-           
             style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
             <h5 className="float-right" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
             <div style={{ height: '10%' }}>
@@ -107,8 +106,8 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                     alt="Farm trucks on open field"
                 />
             </div>
-            <div className="container border border-success"
-                style={{ backgroundColor: '#f4791f', width: '700', marginTop: '20em' }}>
+            <div className="container border border-success sunrise"
+                style={{ width: '700', marginTop: '20em' }}>
                 <div className="m-2 d-flex justify-content-center">
 
                     <div>
