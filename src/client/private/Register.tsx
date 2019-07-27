@@ -123,7 +123,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                 onSubmit={handleSubmit}
                             >
                                 <input
-                                    className="text-dark"
+                                    className="text-dark text-center"
                                     style={{
                                         justifyContent: 'center',
                                         background: 'none',
