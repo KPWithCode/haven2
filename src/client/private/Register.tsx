@@ -125,7 +125,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                 <input
                                     className="text-dark text-center"
                                     style={{
-                                        justifyContent: 'center',
+                                        // justifyContent: 'center',
                                         background: 'none',
                                         fontFamily: 'Baloo Bhai',
                                         color: 'inherit',
@@ -141,7 +141,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                 <input
                                     className="text-dark"
                                     style={{
-                                        justifyContent: 'center',
+                                        // justifyContent: 'center',
                                         background: 'none',
                                         fontFamily: 'Baloo Bhai',
                                         color: 'inherit',
@@ -155,7 +155,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                 />
                                 <input
                                     style={{
-                                        justifyContent: 'center',
+                                        // justifyContent: 'center',
                                         background: 'none',
                                         fontFamily: 'Baloo Bhai',
                                         color: 'inherit',
