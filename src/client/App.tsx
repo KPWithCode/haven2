@@ -26,26 +26,6 @@ const App: React.SFC<AppProps> = () => {
 
     )
 
-    // const [world, setName] = useState<string>('');
-    // useEffect(() => {
-    //     const getName = async () => {
-    //         try {
-    //             let r = await fetch('/api/hello');
-    //             let world = await r.json();
-    //             setName(world);
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     }
-    //     getName();
-    // }, []);
-
-    // return (
-    //     <main className="container">
-    //         <h1 className="covalence-blue">Hello {world}!</h1>
-    //         <h2></h2>
-    //     </main>
-    // );
 }
 
 export default App;
