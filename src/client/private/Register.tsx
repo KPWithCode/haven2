@@ -26,7 +26,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
 
             e.preventDefault();
             try {
-                await fetch("/api/register", {
+                await fetch("/auth/register", {
                     method: "POST",
                     headers: {
                         "Content-type": "application/json"
