@@ -110,7 +110,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                     alt="sunset"
                 />
             </div>
-            <div className="container border border-success"
+            <div className="container border border-success text-center"
                 style={{ width: '700', marginTop: '20em' }}>
                 <div className="m-2 d-flex justify-content-center">
                     <div>
