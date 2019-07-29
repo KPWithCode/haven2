@@ -18,7 +18,7 @@ const Home = () => {
                     <h1 style={{ fontSize: '70px' }}>WELCOME TO SAFE HAVEN</h1>
                 </div>
             </div>
-            <h2 className="text-warning text-center"
+            <h2 className="text-dark text-center"
                 style={{ width: '100%', position: 'absolute', marginTop: '25%', fontSize: '70px' }}>
                 <Link
                     style={{ textDecorationLine: 'none', fontFamily: 'Baloo Bhai' }}

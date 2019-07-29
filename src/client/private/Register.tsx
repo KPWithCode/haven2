@@ -16,12 +16,12 @@ const Register: React.SFC<IRegisterProps> = (props) => {
 
     // When submitted console log info to see if it passes info correctly
     // e: { preventDefault: () => void; }
-    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log({ username, email })
-        if (username && email && password ) {
+        if (username && email && password) {
             let data = {
-                username,email,password
+                username, email, password
             };
 
             e.preventDefault();
@@ -41,7 +41,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     }
 
 
-   
+
     const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUsername(e.target.value)
     }
@@ -51,7 +51,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     }
 
 
-    const handlePasswordChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value)
     }
 
@@ -96,12 +96,12 @@ const Register: React.SFC<IRegisterProps> = (props) => {
 
     return (
         <div
-        className="sunrise" 
-        style={{ width: '100%', height: '100vh' }}>
-            <h1 
-            // onClick={clickLogo}
-            className="text-dark"
-            style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
+            className="sunrise"
+            style={{ width: '100%', height: '100vh' }}>
+            <h1
+                // onClick={clickLogo}
+                className="text-dark"
+                style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
             <h5 className="float-right text-dark" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
             <div style={{ height: '10%' }}>
                 <img
@@ -113,7 +113,6 @@ const Register: React.SFC<IRegisterProps> = (props) => {
             <div className="container border border-success"
                 style={{ width: '700', marginTop: '20em' }}>
                 <div className="m-2 d-flex justify-content-center">
-
                     <div>
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
                             className="d-flex justify-content-center text-dark">REGISTER</h2>
