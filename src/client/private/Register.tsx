@@ -20,9 +20,9 @@ const Register: React.SFC<IRegisterProps> = (props) => {
         e.preventDefault();
         try {
             let result = await json('/auth/register', 'POST', {
-                 name,
-                 email,
-                 password
+                name: name,
+                email: email,
+                password: password
             });
 
             if (result) {
