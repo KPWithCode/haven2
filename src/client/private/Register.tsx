@@ -19,7 +19,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log({ username, email })
-        if (username && email && password) {
+         if (username && email && password) {
             let data = {
                 username, email, password
             };
