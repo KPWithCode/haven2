@@ -18,26 +18,44 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     // e: { preventDefault: () => void; }
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log({ username, email })
-         if (username && email && password) {
-            let data = {
-                username, email, password
-            };
+        try {
+            let result = await json('/auth/register', 'POST', {
+                 name,
+                 email,
+                 password
+            });
 
-            e.preventDefault();
-            try {
-                await fetch("/auth/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-            } catch (e) {
-                console.log(e);
+            if (result) {
+                SetAccessToken(result.token, { userid: result.userid, role: result.role });
+                if (result.role === 'admin') {
+                    this.props.history.push('/message');
+                } else {
+                    this.props.history.push('/');
+                }
             }
-            props.history.push('/message')
+        } catch (e) {
+            console.log(e);
         }
+        // console.log({ username, email })
+        //  if (username && email && password) {
+        //     let data = {
+        //         username, email, password
+        //     };
+
+        //     e.preventDefault();
+        //     try {
+        //         await fetch("/auth/register", {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-type": "application/json"
+        //             },
+        //             body: JSON.stringify(data)
+        //         });
+        //     } catch (e) {
+        //         console.log(e);
+        //     }
+        //     props.history.push('/message')
+        // }
     }
 
 
