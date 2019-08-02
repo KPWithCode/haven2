@@ -83,29 +83,29 @@ const Register: React.SFC<IRegisterProps> = (props) => {
         getUser();
     }, [])
 
-    const getForm = async () => {
-        try {
-            let result = await json('/auth/register', 'POST', {
-                username,
-                email,
-                password
-            });
-            if (result) {
-                SetAccessToken(result.token, { userid: result.userid, role: result.role });
-                if (result.role === 'admin') {
-                    <Redirect to='/message' />
-                } else {
-                    <Redirect to="/register" />
-                }
-            }
-        } catch (e) {
-            console.log(e)
-        }
-    }
+    // const getForm = async () => {
+    //     try {
+    //         let result = await json('/auth/register', 'POST', {
+    //             username,
+    //             email,
+    //             password
+    //         });
+    //         if (result) {
+    //             SetAccessToken(result.token, { userid: result.userid, role: result.role });
+    //             if (result.role === 'admin') {
+    //                 <Redirect to='/message' />
+    //             } else {
+    //                 <Redirect to="/register" />
+    //             }
+    //         }
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
-    useEffect(() => {
-        getForm()
-    }, [])
+    // useEffect(() => {
+    //     getForm()
+    // }, [])
 
     return (
         <div
