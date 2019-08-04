@@ -132,7 +132,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                         <div>
                             <form className="form-group border border-success rounded  p-2 font-weight-bold mb-5 sunrise text-dark text-center  "
                                 // style={{ backgroundColor: '#659999' }}
-                                onSubmit={handleSubmit}
+                                onSubmit={(e)=>handleSubmit(e: React.FormEvent<HTMLFormElement>)}
                             >
                                 <input
                                     className="text-dark  ml-3"
