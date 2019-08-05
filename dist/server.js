@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = {\n    mysql: {\n        connectionLimit: 10,\n        host: 'localhost',\n        user: 'CreateHavven',\n        database: 'Havven',\n        password: 'HavenNOW'\n    },\n    auth: {\n        secret: 'Kyle'\n    },\n    knex: {\n        client: 'mysql',\n        connection: {\n            host: 'localhost',\n            user: 'CreateHavven',\n            database: 'Havven',\n            password: 'HavenNOW'\n        },\n        pool: {\n            min: 0,\n            max: 7\n        }\n    }\n};\n\n\n//# sourceURL=webpack:///./src/server/config/development.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.default = {\n    mysql: {\n        connectionLimit: 10,\n        host: 'us-cdbr-iron-east-02.cleardb.net',\n        user: 'b8bd14a5ace4b6',\n        database: 'heroku_26c5b046f5cf28b',\n        password: '31c27a8f'\n    },\n    auth: {\n        secret: 'Kyle'\n    },\n    knex: {\n        client: 'mysql',\n        connection: {\n            host: 'us-cdbr-iron-east-02.cleardb.net',\n            user: 'b8bd14a5ace4b6',\n            database: 'heroku_26c5b046f5cf28b',\n            password: '31c27a8f'\n        },\n        pool: {\n            min: 0,\n            max: 7\n        }\n    }\n};\n\n\n//# sourceURL=webpack:///./src/server/config/development.ts?");
 
 /***/ }),
 

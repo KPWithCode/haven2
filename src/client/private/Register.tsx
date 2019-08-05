@@ -18,42 +18,42 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     // e: { preventDefault: () => void; }
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        let data = {
-            username, email, password
-        }
-        try {
-            let result = await json('/auth/register', 'POST', {
-                data
-            });
-            if (result) {
-                SetAccessToken(result.token, { userid: result.userid, role: result.role });
-                if (result.role === 'admin') {
-                    props.history.push('/message');
-                } else {
-                    props.history.push('/')
-                }
-            }
-        } catch (e) {
-            console.log(e)
-        }
-        //  if (username && email && password) {
-        //     let data = {
-        //         username, email, password
-        //     };
-
-        //     try {
-        //         await fetch("/auth/register", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-type": "application/json"
-        //             },
-        //             body: JSON.stringify(data)
-        //         });
-        //     } catch (e) {
-        //         console.log(e);
-        //     }
-        //     props.history.push('/message')
+        // let data = {
+        //     username, email, password
         // }
+        // try {
+        //     let result = await json('/auth/register', 'POST', {
+        //         data
+        //     });
+        //     if (result) {
+        //         SetAccessToken(result.token, { userid: result.userid, role: result.role });
+        //         if (result.role === 'admin') {
+        //             props.history.push('/message');
+        //         } else {
+        //             props.history.push('/')
+        //         }
+        //     }
+        // } catch (e) {
+        //     console.log(e)
+        // }
+         if (username && email && password) {
+            let data = {
+                username, email, password
+            };
+
+            try {
+                await fetch("/auth/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+            } catch (e) {
+                console.log(e);
+            }
+            props.history.push('/message')
+        }
     }
 
 
