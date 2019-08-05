@@ -179,11 +179,12 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                     value={password}
                                     onChange={handlePasswordChange}
                                 />
-                            </form>
-                            <div className="d-flex justify-content-center text-dark">
+                                    <div className="d-flex justify-content-center text-dark">
                                 <button className=" btn btn-warning m-1 ">Join The Convo</button>
 
                             </div>
+                            </form>
+                        
                         </div>
                     </div>
                 </div>
