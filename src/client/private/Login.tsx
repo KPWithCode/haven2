@@ -75,8 +75,8 @@ const Login = (props:ILoginProps) => {
                 />
             </div>
             <div className="container"
-                style={{ backgroundColor: '#f4791f', width: '700', marginTop: '20em' }}>
-                <div className="m-2 d-flex justify-content-center">
+                style={{ backgroundColor: '#f4791f', width: '700', marginTop: '20em',position:'relative' }}>
+                <div className=" d-flex justify-content-center">
                     <div>
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
                             className="d-flex justify-content-center">LOGIN</h2>
