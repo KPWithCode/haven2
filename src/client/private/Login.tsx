@@ -40,7 +40,7 @@ const Login = (props:ILoginProps) => {
             })
             if (result) {
                 SetAccessToken(result.token, { userid: result.userid, role: result.role });
-                if (result.role === 'admin') {
+                if (result.role === 'guest') {
                     props.history.push('/message')
                 } else {
                     props.history.push('/');
