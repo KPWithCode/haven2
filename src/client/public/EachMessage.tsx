@@ -10,22 +10,29 @@ export interface Message {
         content: string,
         _created: Date,
         userid: number
-    }
+    },
+    // user: {
+    //     username:string
+    // }
 
 }
+
+
 
 const EachMsg: React.SFC<Message> = props => {
 
 
-
     const { content, _created, id } = props.msg
-
+    // const { username } = props.user
     const newDate = moment(_created).format('MMM Do YY, h:mm:ss a')
+  
+    // let userLetter = username.split('')
 
     if (id % 2 == 2) {
         return (
             <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-start my-1">
                 <div className="d-flex display-inline">
+                    {/* <small style={{fontSize:'2px'}}>{userLetter[0]}</small> */}
                     <span className="badge badge-pill badge-info p-3">{content}</span>
                     <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
                 </div>
