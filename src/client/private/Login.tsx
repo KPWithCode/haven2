@@ -88,6 +88,7 @@ const Login = (props:ILoginProps) => {
                                 style={{width:'60%'}}
                                 >
                                 <input
+                                    style={{textAlign:'center'}}
                                     value={email}
                                     type="email"
                                     placeholder="Email"
@@ -95,6 +96,7 @@ const Login = (props:ILoginProps) => {
                                     onChange={handleEmailChange}
                                 />
                                 <input
+                                    style={{textAlign:'center'}}
                                     className="text-dark  ml-3"
                                     type="text"
                                     placeholder="Username"
@@ -103,6 +105,7 @@ const Login = (props:ILoginProps) => {
                                     required
                                 />
                                 <input
+                                    style={{textAlign:'center'}}
                                     value={password}
                                     type="password"
                                     placeholder="Password"
