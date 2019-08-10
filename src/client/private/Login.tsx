@@ -97,9 +97,9 @@ const Login = (props:ILoginProps) => {
                                 />
                                 <button className="btn btn-primary btn-block shadow">Login</button>
                             </form>
-                            <div className="d-flex justify-content-center">
+                            {/* <div className="d-flex justify-content-center">
                                 <button style={{ backgroundColor: '#f4791f' }} className=" btn btn-warning m-1 ">Join The Convo</button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
