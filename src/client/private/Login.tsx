@@ -64,7 +64,7 @@ const Login = (props:ILoginProps) => {
 
 
     return (
-        <div style={{ width: '100%', height: '100vh' }}>
+        <div style={{ width: '100%', height: '100vh',overflow:'hidden' }}>
             <h1 className="" style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
             <h5 className="float-right" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
             <div style={{ height: '10%' }}>
