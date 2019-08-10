@@ -84,7 +84,7 @@ const Login = (props:ILoginProps) => {
 
                             <form
                                 onSubmit={e => handleSubmit(e)}
-                                className="rounded p-3 shadow-lg d-flex justify-content-center">
+                                className="rounded p-3 shadow-lg">
                                 <input
                                     value={email}
                                     type="email"
