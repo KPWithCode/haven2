@@ -85,13 +85,13 @@ const Login = (props:ILoginProps) => {
                             <form
                                 onSubmit={e => handleSubmit(e)}
                                 className="rounded p-3 shadow-lg">
-                                {/* <input
+                                <input
                                     value={email}
                                     type="email"
                                     placeholder="Email"
                                     required
                                     onChange={handleEmailChange}
-                                /> */}
+                                />
                                 <input
                                     className="text-dark  ml-3"
                                     type="text"
