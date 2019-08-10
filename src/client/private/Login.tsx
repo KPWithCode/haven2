@@ -74,8 +74,8 @@ const Login = (props:ILoginProps) => {
                     alt="Farm trucks on open field"
                 />
             </div>
-            <div className="container"
-                style={{ backgroundColor: '#f4791f', width: '700', marginTop: '20em',position:'relative' }}>
+            <div className="container d-flex justify-content-center"
+                style={{ backgroundColor: '#f4791f', width: '60%', marginTop: '20em',position:'relative' }}>
                 <div className=" d-flex justify-content-center">
                     <div>
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
