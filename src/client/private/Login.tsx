@@ -8,6 +8,7 @@ const Login = (props:ILoginProps) => {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const [username, setUsername] = useState<string>('')
     const [loginStatus, setLoginStatus] = useState<boolean>(false)
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +17,9 @@ const Login = (props:ILoginProps) => {
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value)
+    }
+    const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUsername(e.target.value)
     }
     // Component did mount 
     const getUser = async () => {
@@ -87,6 +91,14 @@ const Login = (props:ILoginProps) => {
                                     placeholder="Email"
                                     required
                                     onChange={handleEmailChange}
+                                />
+                                <input
+                                    className="text-dark  ml-3"
+                                    type="text"
+                                    placeholder="Username"
+                                    value={username}
+                                    onChange={handleUsernameChange}
+                                    required
                                 />
                                 <input
                                     value={password}
