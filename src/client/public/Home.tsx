@@ -22,7 +22,7 @@ const Home = () => {
                 style={{ width: '100%', position: 'absolute', marginTop: '25%', fontSize: '70px' }}>
                 <Link
                     style={{ textDecorationLine: 'none', fontFamily: 'Baloo Bhai' }}
-                    className="text-dark text-center" to="/Login">CHAT NOW</Link>
+                    className="text-dark text-center" to="/Register">CHAT NOW</Link>
             </h2>
         </div>
     )
