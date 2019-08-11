@@ -34,30 +34,47 @@ const Login = (props:ILoginProps) => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-       
-        if (loginStatus) return;
-
-        try {
-            setLoginStatus(true)
-            let result = await json('/auth/login', 'POST', {
+        if (username && password) {
+            let data = {
                 username, password
-            })
-            if (result) {
-                SetAccessToken(result.token, { userid: result.userid, role: result.role });
-                if (result.role === 'guest') {
-                    props.history.push('/message')
-                } else {
-                    props.history.push('/');
-                }
-            } else {
-                setLoginStatus(loginStatus)
+            };
+
+            try {
+                await fetch("/auth/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+            } catch (e) {
+                console.log(e);
             }
-        } catch (e) {
-            setLoginStatus(false)
-            throw e;
-        } finally {
-            setLoginStatus(false)
+            props.history.push('/message')
         }
+        // if (loginStatus) return;
+
+        // try {
+        //     setLoginStatus(true)
+        //     let result = await json('/auth/login', 'POST', {
+        //         username, password
+        //     })
+        //     if (result) {
+        //         SetAccessToken(result.token, { userid: result.userid, role: result.role });
+        //         if (result.role === 'guest') {
+        //             props.history.push('/message')
+        //         } else {
+        //             props.history.push('/');
+        //         }
+        //     } else {
+        //         setLoginStatus(loginStatus)
+        //     }
+        // } catch (e) {
+        //     setLoginStatus(false)
+        //     throw e;
+        // } finally {
+        //     setLoginStatus(false)
+        // }
     }
 
 
