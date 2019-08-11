@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Banner from '../Rooms/Banner';
 import EachMsg from './EachMessage';
 import { User } from '../utils/api'
-
+import io from 'socket.io-client'
 
 export interface IMessageProps { }
 
@@ -18,12 +18,15 @@ export interface IMessage {
     _created: Date,
     userid: number
 }
-
+let socket;
 const Message = () => {
 
     const [messages, setMessages] = useState<Array<IMessage> | undefined>([]);
     const [content, setContent] = useState<string>('')
 
+        if (!socket) {
+            socket = io(':3001')
+        }
 
 
     useEffect(() => {

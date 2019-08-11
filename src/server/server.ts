@@ -1,27 +1,24 @@
 import path = require('path');
-import express= require('express') ;
+import express = require('express');
 import apiRouter from './routes';
 import './middleware/bearerstrategy';
 import './middleware/localstrategy';
 import * as passport from 'passport';
-// import * as socketio from 'socket.io';
 
 const app = express();
-
 // Socket set up and binded to http server
-// let http = require("http").Server(app);
-// let io = require("socket.io")(http);
-// // // user connected 
-// io.on("connection", function(socket: any) {
-//     console.log("a user connected");
+let http = require("http").Server(app);
+let io = require("socket.io")(http);
+// // // user connected  
+io.on("connection", function (socket: any) {
+    console.log("a user connected");
+    socket.on("message", function (message: any) {
+        console.log(message);
+    });
+});
 
 
-    // whenever we receive a 'message' we log it out
-//     socket.on("message", function(message: any) {
-//         console.log(message);
-//       });
 
-//   });
 let p = path.join(__dirname, '../public');
 app.use(express.json())
 app.use(express.static(p));
@@ -33,8 +30,11 @@ app.route('/auth').get(passport.authenticate(''))
 
 app.use('*', (req, res, next) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
-})    
+})
 
+http.listen(3001, function() {
+    console.log('on :3001')
+});
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server listening on port: ${port}`);
