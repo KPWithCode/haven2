@@ -35,7 +35,7 @@ app.use('*', (req, res, next) => {
 http.listen(3001, function() {
     console.log('on :3001')
 });
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server listening on port: ${port}`);
-});
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//     console.log(`Server listening on port: ${port}`);
+// });
