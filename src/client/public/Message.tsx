@@ -3,6 +3,7 @@ import Banner from '../Rooms/Banner';
 import EachMsg from './EachMessage';
 import { User } from '../utils/api'
 import io from 'socket.io-client'
+import { userInfo } from 'os';
 
 export interface IMessageProps { }
 
@@ -12,22 +13,26 @@ export interface IMessage {
         content: string,
         _created: Date,
         userid: number
+        username: string
     }[]
     id: number,
     content: string,
     _created: Date,
-    userid: number
-}
-let socket;
-const Message = () => {
+    userid: number,
+    username:string
 
+    
+}
+
+// let socket;
+const Message = () => {
+    const [messageCount, setMessageCount] = useState(0);
     const [messages, setMessages] = useState<Array<IMessage> | undefined>([]);
     const [content, setContent] = useState<string>('')
 
-        if (!socket) {
-            socket = io(':3001')
-        }
-
+        // if (!socket) {
+        //     socket = io(':3001')
+        // }
 
     useEffect(() => {
         const getMessages = async () => {
@@ -41,6 +46,7 @@ const Message = () => {
         }
         getMessages();
     }, [])
+    
 
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setContent(e.target.value)
@@ -49,7 +55,6 @@ const Message = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         if (content && User) {
             let data = {
                 content,
@@ -84,7 +89,6 @@ const Message = () => {
                     userid: data[key].userid,
                     content: data[key].content
                 }
-
             })
             msg.pop()
             msg.reverse()

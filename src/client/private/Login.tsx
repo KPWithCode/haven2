@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { json, SetAccessToken, User } from '../utils/api';
 import { Redirect, RouteComponentProps } from 'react-router';
+import { Link } from 'react-router-dom';
 
-export interface ILoginProps extends RouteComponentProps {}
+export interface ILoginProps extends RouteComponentProps { }
 
-const Login = (props:ILoginProps) => {
+const Login = (props: ILoginProps) => {
 
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
@@ -81,8 +82,8 @@ const Login = (props:ILoginProps) => {
 
 
     return (
-        <div style={{ width: '100%', height: '100vh',overflow:'hidden' }}>
-            <h1 className="" style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
+        <div style={{ width: '100%', height: '100vh', overflow: 'hidden', fontFamily: 'Baloo Bhai' }}>
+            <h1 style={{ color: '#659999', fontFamily: 'Baloo Bhai', font: 'cursive', fontSize: '70px' }}>SAFEHAVEN</h1>
             <h5 className="float-right" style={{ color: '#f4791f', fontFamily: 'Baloo Bhai', fontSize: '25px' }}>A Safe Space to Discuss Agriculture</h5>
             <div style={{ height: '10%' }}>
                 <img
@@ -92,16 +93,16 @@ const Login = (props:ILoginProps) => {
                 />
             </div>
             <div className="container d-flex justify-content-center"
-                style={{ backgroundColor: '#f4791f', width: '60%', marginTop: '20em',position:'relative' }}>
+                style={{ backgroundColor: '#f4791f', width: '80%', marginTop: '20em', position: 'relative' }}>
                 <div className=" d-flex justify-content-center">
                     <div>
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
                             className="d-flex justify-content-center">LOGIN</h2>
-                        <div>
-
+                        <div className="d-flex justify-content-center">
                             <form
+                                style={{ width: '100%' }}
                                 onSubmit={e => handleSubmit(e)}
-                                className="rounded p-3 shadow-lg">
+                                className="d-flex justify-content-center  rounded p-3 shadow-lg">
                                 <input
                                     value={email}
                                     type="email"
@@ -110,7 +111,6 @@ const Login = (props:ILoginProps) => {
                                     onChange={handleEmailChange}
                                 />
                                 <input
-                                    className="text-dark  ml-3"
                                     type="text"
                                     placeholder="Username"
                                     value={username}
@@ -124,11 +124,12 @@ const Login = (props:ILoginProps) => {
                                     required
                                     onChange={handlePasswordChange}
                                 />
-                                <button className="btn btn-primary btn-block shadow">Login</button>
+                                <button style={{color: '#659999',backgroundColor:'#f4791f'}} className="btn btn-block shadow">Login</button>
                             </form>
-                            {/* <div className="d-flex justify-content-center">
-                                <button style={{ backgroundColor: '#f4791f' }} className=" btn btn-warning m-1 ">Join The Convo</button>
-                            </div> */}
+            
+                        </div>
+                        <div className="text-center">
+                            <Link className="mt-2" style={{color: '#659999', fontSize:'1.5em'}} to="/Register">Register</Link>   
                         </div>
                     </div>
                 </div>

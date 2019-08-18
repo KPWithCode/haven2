@@ -4,35 +4,33 @@ import Message from './Message'
 
 export interface EachMsgProps { }
 
-export interface Message {
+export interface EachMsg {
     msg: {
         id: number,
         content: string,
         _created: Date,
-        userid: number
+        userid: number,
+        username:string
     },
-    // user: {
-    //     username:string
-    // }
 
 }
 
 
 
-const EachMsg: React.SFC<Message> = props => {
+const EachMsg: React.SFC<EachMsg> = props => {
 
 
-    const { content, _created, id } = props.msg
-    // const { username } = props.user
+    const { content, _created, id,username } = props.msg
+ 
     const newDate = moment(_created).format('MMM Do YY, h:mm:ss a')
   
-    // let userLetter = username.split('')
+    let userLetter = username.split('')[0]
 
     if (id % 2 == 2) {
         return (
             <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-start my-1">
                 <div className="d-flex display-inline">
-                    {/* <small style={{fontSize:'2px'}}>{userLetter[0]}</small> */}
+                    <small style={{fontSize:'2px'}}>{userLetter}</small>
                     <span className="badge badge-pill badge-info p-3">{content}</span>
                     <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
                 </div>
