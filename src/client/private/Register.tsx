@@ -123,14 +123,14 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                     alt="sunset"
                 />
             </div>
-            <div className="container border border-success text-center"
+            <div className="container text-center"
                 style={{ width: '700', marginTop: '20em' }}>
                 <div className="m-2 d-flex justify-content-center">
                     <div>
                         <h2 style={{ color: '#659999', fontFamily: 'Baloo Bhai', fontSize: '50px' }}
                             className="d-flex justify-content-center text-dark">REGISTER</h2>
                         <div>
-                            <form className="form-group border border-success rounded  p-2 font-weight-bold mb-5 sunrise text-dark text-center  "
+                            <form className="form-group rounded  p-2 font-weight-bold mb-5 sunrise text-dark text-center  "
                                 // style={{ backgroundColor: '#659999' }}
                                 onSubmit={(e)=>handleSubmit(e)}
                             >

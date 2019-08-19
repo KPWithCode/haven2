@@ -12,9 +12,6 @@ const Login = (props: ILoginProps) => {
     const [username, setUsername] = useState<string>('')
     const [loginStatus, setLoginStatus] = useState<boolean>(false)
 
-    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(e.target.value)
-    }
 
     const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(e.target.value)
@@ -103,13 +100,7 @@ const Login = (props: ILoginProps) => {
                                 style={{ width: '100%' }}
                                 onSubmit={e => handleSubmit(e)}
                                 className="d-flex justify-content-center  rounded p-3 shadow-lg">
-                                <input
-                                    value={email}
-                                    type="email"
-                                    placeholder="Email"
-                                    required
-                                    onChange={handleEmailChange}
-                                />
+                           
                                 <input
                                     type="text"
                                     placeholder="Username"
