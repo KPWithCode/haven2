@@ -26,28 +26,38 @@ const EachMsg: React.SFC<EachMsg> = props => {
   
     let userLetter = username.split('')[0]
 
-    if (id % 2 == 2) {
-        return (
-            <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-start my-1">
-                <div className="d-flex display-inline">
-                    <small style={{fontSize:'2px'}}>{userLetter}</small>
-                    <span className="badge badge-pill badge-info p-3">{content}</span>
-                    <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
-                </div>
-                <hr style={{ borderWidth: '2px' }} />
+    // if (id % 2 == 2) {
+    //     return (
+    //         <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-start my-1">
+    //             <div className="d-flex display-inline">
+    //                 <small style={{fontSize:'2px'}}>{userLetter}</small>
+    //                 <span className="badge badge-pill badge-info p-3">{content}</span>
+    //                 <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
+    //             </div>
+    //             <hr style={{ borderWidth: '2px' }} />
+    //         </div>
+    //     )
+    // } else {
+    //     return (
+    //         <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-end my-1">
+    //             <div className="d-flex display-inline">
+    //                 <span className="badge badge-pill badge-info p-3">{content}</span>
+    //                 <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
+    //             </div>
+    //             <hr style={{ borderWidth: '2px' }} />
+    //         </div>
+    //     )
+    // }
+    return (
+        <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-start my-1">
+            <div className="d-flex display-inline">
+                <small style={{fontSize:'2px'}}>{userLetter}</small>
+                <span className="badge badge-pill badge-info p-3">{content}</span>
+                <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
             </div>
-        )
-    } else {
-        return (
-            <div style={{ color: '#3A5D58', width: '85%' }} className=" d-flex justify-content-end my-1">
-                <div className="d-flex display-inline">
-                    <span className="badge badge-pill badge-info p-3">{content}</span>
-                    <span style={{ fontSize: '9px' }} className="badge badge-pill badge-info p-3 ">{newDate}</span>
-                </div>
-                <hr style={{ borderWidth: '2px' }} />
-            </div>
-        )
-    }
+            <hr style={{ borderWidth: '2px' }} />
+        </div>
+    )
 
 
 }
