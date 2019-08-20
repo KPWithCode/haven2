@@ -3,7 +3,7 @@ import Banner from '../Rooms/Banner';
 import EachMsg from './EachMessage';
 import { User } from '../utils/api'
 import io from 'socket.io-client'
-import { userInfo } from 'os';
+
 
 export interface IMessageProps { }
 
