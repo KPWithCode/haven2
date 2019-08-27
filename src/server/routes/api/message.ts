@@ -42,8 +42,8 @@ msgRouter.post('/', async (req, res, next) => {
         // let id= req.body.id;
         // let created = req.body._created
         let content = req.body.content
-        let userid = req.body.userid
-        let newMsg = await DB.Msg.newMsg(content, userid);
+        // let userid = req.body.userid
+        let newMsg = await DB.Msg.newMsg(content);
         res.json({ message: "Posted" })
     } catch (e) {
         console.log(e)
