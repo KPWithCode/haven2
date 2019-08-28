@@ -22,7 +22,7 @@ const Login = (props: ILoginProps) => {
     // Component did mount 
     const getUser = async () => {
         if (User && User.role === 'guest') {
-            props.history.push('/message')
+            props.history.push('/message2')
         }
 
     }
@@ -48,7 +48,7 @@ const Login = (props: ILoginProps) => {
             } catch (e) {
                 console.log(e);
             }
-            props.history.push('/message')
+            props.history.push('/message2')
         }
         // if (loginStatus) return;
 

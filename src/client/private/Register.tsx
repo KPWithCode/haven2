@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router';
 import { SetAccessToken, json, User } from '../utils/api';
-import { Redirect } from 'react-router';
-
 
 export interface IRegisterProps extends RouteComponentProps { }
 
@@ -12,47 +10,48 @@ const Register: React.SFC<IRegisterProps> = (props) => {
     // Safely typed
     const [username, setUsername] = useState<string>('')
     const [email, setEmail] = useState<string>('')
-    const [password, setPassword] = useState<string>('')
+    const [password, setPassword] = useState<any>('')
 
     // When submitted console log info to see if it passes info correctly
     // e: { preventDefault: () => void; }
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // let data = {
-        //     username, email, password
-        // }
-        // try {
-        //     let result = await json('/auth/register', 'POST', {
-        //         data
-        //     });
-        //     if (result) {
-        //         SetAccessToken(result.token, { userid: result.userid, role: result.role });
-        //         if (result.role === 'admin') {
-        //             props.history.push('/message');
-        //         } else {
-        //             props.history.push('/')
-        //         }
-        //     }
-        // } catch (e) {
-        //     console.log(e)
-        // }
-         if (username && email && password) {
-            let data = {
-                username, email, password
-            };
-
-            try {
-                await fetch("/auth/register", {
-                    method: "POST",
-                    headers: {
-                        "Content-type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-            } catch (e) {
-                console.log(e);
+        let data = {
+            username, email, password
+        }
+        try {
+            let result = await json('/auth/register', 'POST', {
+                data
+            });
+            if (result) {
+                SetAccessToken(result.token, { userid: result.userid, role: result.role });
+                if (result.role === 'guest') {
+                    props.history.push('/message2');
+                } else {
+                    props.history.push('/')
+                }
             }
-            props.history.push('/message')
+        } catch (e) {
+            console.log(e)
+            // // }
+            //  if (username && email && password) {
+            //     let data = {
+            //         username, email, password
+            //     };
+
+            //     try {
+            //         await fetch("/auth/register", {
+            //             method: "POST",
+            //             headers: {
+            //                 "Content-type": "application/json"
+            //             },
+            //             body: JSON.stringify(data)
+            //         });
+            //     } catch (e) {
+            //         console.log(e);
+            //     }
+            //     props.history.push('/message')
+            // }
         }
     }
 
@@ -73,7 +72,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
 
     // Component did mount 
     const getUser = async () => {
-        if (User && User.role === 'admin') {
+        if (User && User.role === 'guest') {
             props.history.push('/message')
         }
 
@@ -132,7 +131,7 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                         <div>
                             <form className="form-group rounded  p-2 font-weight-bold mb-5 sunrise text-dark text-center  "
                                 // style={{ backgroundColor: '#659999' }}
-                                onSubmit={(e)=>handleSubmit(e)}
+                                onSubmit={(e) => handleSubmit(e)}
                             >
                                 <input
                                     className="text-dark  ml-3"
@@ -179,12 +178,12 @@ const Register: React.SFC<IRegisterProps> = (props) => {
                                     value={password}
                                     onChange={handlePasswordChange}
                                 />
-                                    <div className="d-flex justify-content-center text-dark">
-                                <button className=" btn btn-warning m-1 ">Join The Convo</button>
+                                <div className="d-flex justify-content-center text-dark">
+                                    <button className=" btn btn-warning m-1 ">Join The Convo</button>
 
-                            </div>
+                                </div>
                             </form>
-                        
+
                         </div>
                     </div>
                 </div>
